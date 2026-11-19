@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="mark" aria-hidden="true">VI</div>
+    <div>
+      <h1>Leonida Trophy Guide</h1>
+      <p class="sub">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies &middot; 1 Platinum, 2 Gold, 6 Silver, 46 Bronze &middot; 28 hidden on PlayStation</p>
+    </div>
+  </div>
+  <div class="progressbox" id="progressbox">
+    <div class="prow"><strong id="progressText">0 of 55 earned</strong><span id="progressPct">0%</span></div>
+    <div class="bar"><div class="fill" id="progressFill" style="width:0%"></div></div>
+    <div class="grades" id="gradeCounts"></div>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button type="button" class="tab active" data-view="checklist">Checklist</button>
+  <button type="button" class="tab" data-view="roadmap">Roadmap to Platinum</button>
+  <button type="button" class="tab" data-view="missables">Missable trophies</button>
+  <button type="button" class="tab" data-view="about">About &amp; honesty note</button>
+</nav>
+
+<section class="controls" id="controls">
+  <input id="search" type="search" placeholder="Search a trophy name or mission…" aria-label="Search trophies">
+  <div class="kinds" id="kinds" role="group" aria-label="Filter by kind">
+    <button type="button" data-kind="all" class="kind active">All</button>
+    <button type="button" data-kind="story" class="kind">Story</button>
+    <button type="button" data-kind="missable" class="kind">Missable</button>
+    <button type="button" data-kind="collectibles" class="kind">Collectibles</button>
+    <button type="button" data-kind="activities" class="kind">Activities</button>
+    <button type="button" data-kind="online" class="kind">Online</button>
+  </div>
+  <label class="sel">Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="chk"><input type="checkbox" id="spoilers"> Hide story spoilers</label>
+  <label class="chk"><input type="checkbox" id="hideEarned"> Hide earned</label>
+  <div class="io">
+    <button type="button" id="export">Export progress</button>
+    <label class="importbtn">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+    <button type="button" id="reset">Reset</button>
+  </div>
+</section>
+
+<main>
+  <p class="hint" id="hint">Tap a trophy to open its guide and sources. Tick the box when you earn it — progress is saved in this browser.</p>
+  <div id="view-checklist" class="view"></div>
+
+  <div id="view-roadmap" class="view" hidden>
+    <h2>Roadmap to the Platinum — “Vice Got a Price!”</h2>
+    <p>Built only from what the official trophy descriptions say. The game is unreleased (due May 2026 at the time of writing), so chapter and mission names below are the ones the descriptions themselves name; exact locations and step-by-step routes are <strong>not yet confirmed</strong> and are marked as such wherever they appear.</p>
+    <ol class="roadmap" id="roadmap"></ol>
+    <p class="note">Order of play: finish the story first (Chapters 1–4 and the final mission), clear the side-mission strands as they open, then sweep collectibles and activities in free roam, and finish with the counted grinds (250 stunts, 100 vehicles, 100 WAiNK spots) and 100% completion for “A Long Road”. The Platinum pops when the other 54 are earned.</p>
+  </div>
+
+  <div id="view-missables" class="view" hidden>
+    <h2>Missable trophies — watch out</h2>
+    <p>“Missable” here means the trophy is tied to one attempt, one moment, or one set of choices, so failing the condition means doing the attempt again. Nothing here is confirmed missable by the publisher — the game is unreleased — so each entry says what the description proves and what is only a precaution. Cheap insurance for the whole list: keep a manual save at the start of every chapter and one before the final mission.</p>
+    <div id="missableList"></div>
+  </div>
+
+  <div id="view-about" class="view" hidden>
+    <h2>About this guide</h2>
+    <p>This is an unofficial fan-made guide and tracker. It is not affiliated with Rockstar Games, Sony, or PlayStation, and it uses no Rockstar logo, artwork, box art, or game screenshots. All trophy names and descriptions are shown as PlayStation publishes them; every guide is written in our own words for this entry.</p>
+    <h3>How to read the honesty labels</h3>
+    <ul>
+      <li><strong>From the description:</strong> the official description itself says this. Safe to plan around.</li>
+      <li><strong>Unconfirmed:</strong> a step, place, or count that goes beyond the description. It is a reasonable reading or a fan-guide claim, not a verified fact — check it again after release.</li>
+      <li><strong>Source:</strong> every trophy names where its facts come from. A specific claim with no source beside it earns no trust.</li>
+    </ul>
+    <h3>Sources used for the whole list</h3>
+    <ul>
+      <li>Exophase — GTA VI trophy list (names, descriptions, grades)</li>
+      <li>PSNProfiles — Grand Theft Auto VI trophy list (names, descriptions, grades)</li>
+      <li>Press Start — GTA 6 trophy list, 18 November 2026 (list as published at launch)</li>
+      <li>Output Lag — GTA 6 Trophy List, November 2026 (save and missable precautions; treated as unconfirmed)</li>
+      <li>Insider Gaming / Notebookcheck, 8 November 2026 — reported 55-trophy count before launch</li>
+    </ul>
+    <p class="note">GTA VI is unreleased at the time this guide was written. No location, mission step, or count beyond the official description is presented as verified fact.</p>
+  </div>
+</main>
+
+<footer>
+  <p>Unofficial fan guide. Not affiliated with Rockstar Games or PlayStation. Works fully offline — no network requests. Progress stays in your browser (localStorage).</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
